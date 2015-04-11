@@ -122,11 +122,6 @@ fi
 
 export SVN_EDITOR=vim
 
-# for bash-completion
-if [ -f /usr/local/etc/bash_completion ]; then
-	    . /usr/local/etc/bash_completion
-	fi
-source /usr/local/etc/bash_completion.d/svn-completion.sh
 
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
 export COCOS_CONSOLE_ROOT=/Users/ssohjiro/cocos2d-js-v3.2/tools/cocos2d-console/bin
@@ -134,3 +129,15 @@ export PATH=$COCOS_CONSOLE_ROOT:$PATH
 export ANT_ROOT=/Users/ssohjiro/openSrc/apache-ant-1.9.4/bin
 export ANDROID_SDK_ROOT=/Users/ssohjiro/openSrc/adt-bundle-mac-x86_64-20140702/sdk
 export NDK_ROOT=/Users/ssohjiro/openSrc/android-ndk-r9d
+
+
+# for bash-completion
+if [ -f /usr/local/etc/bash_completion ]; then
+	. /usr/local/etc/bash_completion
+fi
+
+source /usr/local/etc/bash_completion.d/svn-completion.sh
+
+if [ -f ~/.git-completion.bash ]; then
+	. ~/.git-completion.bash
+fi
